@@ -1,0 +1,31 @@
+<ng-template #innerContent>
+    <div>
+        <h5 class="mb-0">{{title}}</h5>
+        <p class="mb-0">
+            <small class="text-muted">
+                {{description}}
+            </small>
+        </p>
+    </div>
+    
+    <mat-icon *ngIf="!!nodeIds && !!edgeIds">navigate_next</mat-icon>
+</ng-template>
+
+
+
+
+
+<a *ngIf="(!!nodeIds && !!edgeIds ) else simpleDiv" routerLink="/graphs" [queryParams]="{ nodeIds, edgeIds }" class="col-12 p-0 pl-2 pr-1 graph-item">
+    <ng-container *ngTemplateOutlet="innerContent">
+    </ng-container>
+</a>
+
+
+<ng-template #simpleDiv>
+    <div class="col-12 p-0 pl-2 pr-1 how-to-item">
+        <ng-container *ngTemplateOutlet="innerContent">
+        </ng-container>
+    </div>
+</ng-template>
+
+

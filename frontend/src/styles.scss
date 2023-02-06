@@ -1,0 +1,103 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+@import '../node_modules/@swimlane/ngx-datatable/index.css';
+@import '../node_modules/@swimlane/ngx-datatable/themes/material.scss';
+@import '../node_modules/@swimlane/ngx-datatable/assets/icons.css';
+
+@import '../node_modules/@mat-datetimepicker/core/datetimepicker/datetimepicker-theme.scss';
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+//Material-Bootstrap configuration
+@import "assets/scss/bootstrap-material";
+
+@import './blue-theme.scss';
+@import './pink-theme.scss';
+@import './primary-theme.scss';
+
+@import "../node_modules/flag-icons/css/flag-icons.min.css";
+
+.cursor-pointer{
+    cursor: pointer !important;
+}
+.cursor-grab{
+    cursor: grab;
+}
+.cursor-unset{
+    cursor: unset !important;
+}
+
+.rounded-button{
+    border-radius: 20px !important;
+}
+.button-rounded-padding{
+    padding-left: 2.3rem !important;
+    padding-right: 2.3rem !important;
+}
+
+.table-head-gray{
+    background-color: #e5e5e5;
+}
+
+.background-gray{
+    background-color: #e0e0e0 !important;
+}
+.background-gray-dark{
+    background-color: #d6d6d8 !important;
+}
+
+.background-blue{
+    background-color: #0d47a1 !important;
+    
+}
+
+.ngx-datatable.material.single-selection .datatable-body-row.active .datatable-row-group{
+    background-color: #e0e0e0;
+}
+
+.ngx-datatable.material.single-selection .datatable-body-row.active:hover, .ngx-datatable.material.single-selection .datatable-body-row.active:hover .datatable-row-group, .ngx-datatable.material.multi-selection .datatable-body-row.active:hover, .ngx-datatable.material.multi-selection .datatable-body-row.active:hover .datatable-row-group, .ngx-datatable.material.multi-click-selection .datatable-body-row.active:hover, .ngx-datatable.material.multi-click-selection .datatable-body-row.active:hover .datatable-row-group{
+    background-color: #e0e0e0;
+}
+
+.ngx-datatable.material {
+    .datatable-header {
+      background-color: #e5e5e5 ;
+      .datatable-header-cell{
+          background-color: unset;
+          font-weight: bold;
+          color: #000;
+      }
+    }
+}
+
+.primary-theme .mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: .8em 0;
+    border-top: 0;
+}
+
+
+.search-icon-search-bar{
+    transform: translateY(3px);
+    opacity: .2;
+}
+
+.mat-dialog-container{
+    .mat-form-field-appearance-outline .mat-form-field-outline {
+        background-color: white;
+        border-radius: 5px;
+    }
+}
+
+
+.pb-0{
+    .mat-form-field-wrapper  {
+       padding-bottom: 0px !important;
+   }
+}
+
+.mb-0 {
+    .mat-form-field-wrapper  {
+        margin-bottom: 0px !important;
+    }
+}

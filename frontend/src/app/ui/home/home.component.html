@@ -1,0 +1,35 @@
+<!-- <section class="row m-0 pt-4 align-items-end">
+    <div class="col-12 col-md-5">
+        <img src="../../../assets/images/intelcomp.svg" class="img img-fluid" alt="Intelcomp Logo">
+    </div>
+    <div class="d-none d-md-inline-block col-2"></div>
+
+    <div class="col">
+
+        <img src="../../../assets/images/european-commision-logo.svg" class="img img-fluid" alt="Intelcomp Logo">
+    </div>
+    <div class="d-none d-md-inline-block col-2"></div>
+
+</section> -->
+
+
+<section class="actions-grid mt-5 pr-5 pl-5">
+    <section >
+        <h3>
+            {{'APP.HOME-COMPONENT.AVAILABLE-GRAPHS' | translate}}
+        </h3>
+        <div class="row m-0">
+
+            <app-graph-list-item-card 
+                *ngFor="let item of graphs"
+                class="w-100"
+                [title]="item.title"
+                [description]="item.description"
+                [nodeIds]="item.nodeIds"
+                [edgeIds]="item.edgeIds"
+            >
+            </app-graph-list-item-card>
+
+        </div>
+    </section>
+</section>

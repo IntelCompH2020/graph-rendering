@@ -1,0 +1,275 @@
+permissions:
+  extendedClaims: [ ]
+  policies:
+    DeferredAffiliation:
+      roles:
+        - ic-sti-superuser
+        - graphadmin
+        - graphuser
+      clients: [ ]
+      allowAnonymous: false
+      allowAuthenticated: false
+    # Users
+    BrowseUser:
+      roles:
+        - ic-sti-superuser
+      clients: [ ]
+      allowAnonymous: true
+      allowAuthenticated: false
+    EditUser:
+      roles:
+        - ic-sti-superuser
+      clients: [ ]
+      allowAnonymous: false
+      allowAuthenticated: false
+    DeleteUser:
+      roles:
+        -           ic-sti-superuser
+      claims: [ ]
+      clients: [ ]
+      allowAnonymous: false
+      allowAuthenticated: false
+    
+    # Nodes
+    BrowseNode:
+      roles:
+        - ic-sti-superuser
+      clients: [ ]
+      allowAnonymous: true
+      allowAuthenticated: false
+    EditNode:
+      roles:
+        - ic-sti-superuser
+      clients: [ ]
+      allowAnonymous: false
+      allowAuthenticated: false
+    DeleteNode:
+      roles:
+        - ic-sti-superuser
+      claims: [ ]
+      clients: [ ]
+      allowAnonymous: false
+      allowAuthenticated: false
+    
+    # Graphs
+    BrowseGraph:
+      roles:
+        - ic-sti-superuser
+      clients: [ ]
+      allowAnonymous: true
+      allowAuthenticated: false
+    EditGraph:
+      roles:
+        - ic-sti-superuser
+      clients: [ ]
+      allowAnonymous: false
+      allowAuthenticated: false
+    DeleteGraph:
+      roles:
+        - ic-sti-superuser
+      claims: [ ]
+      clients: [ ]
+      allowAnonymous: false
+      allowAuthenticated: false
+    # Node Data
+    BrowseNodeData:
+      roles:
+        - ic-sti-superuser
+      node:
+        roles:
+          - ic-sti-superuser
+          - graphadmin
+          - graphuser
+      clients: [ ]
+      allowAnonymous: true
+      allowAuthenticated: false
+    EditNodeData:
+      roles:
+        - ic-sti-superuser
+      node:
+        roles:
+          - graphadmin
+      clients: [ ]
+      allowAnonymous: false
+      allowAuthenticated: false
+    DeleteNodeData:
+      roles:
+        - ic-sti-superuser
+      node:
+        roles:
+          - graphadmin
+      claims: [ ]
+      clients: [ ]
+      allowAnonymous: false
+      allowAuthenticated: false
+    
+    # Edges
+    BrowseEdge:
+      roles:
+        - ic-sti-superuser
+      clients: [ ]
+      allowAnonymous: true
+      allowAuthenticated: false
+    EditEdge:
+      roles:
+        - ic-sti-superuser
+      clients: [ ]
+      allowAnonymous: false
+      allowAuthenticated: false
+    DeleteEdge:
+      roles:
+        - ic-sti-superuser
+      claims: [ ]
+      clients: [ ]
+      allowAnonymous: false
+      allowAuthenticated: false
+    # EdgeData
+    BrowseEdgeData:
+      roles:
+        - ic-sti-superuser
+      node:
+        roles:
+          - ic-sti-superuser
+          - graphadmin
+          - graphuser
+      clients: [ ]
+      allowAnonymous: true
+      allowAuthenticated: false
+    EditEdgeData:
+      roles:
+        - ic-sti-superuser
+      node:
+        roles:
+          - graphadmin
+      clients: [ ]
+      allowAnonymous: false
+      allowAuthenticated: false
+    DeleteEdgeData:
+      roles:
+        - ic-sti-superuser
+      node:
+        roles:
+          - graphadmin
+      claims: [ ]
+      clients: [ ]
+      allowAnonymous: false
+      allowAuthenticated: false
+
+    # NodeAccesss
+    BrowseNodeAccess:
+      roles:
+        - ic-sti-superuser
+      clients: [ ]
+      allowAnonymous: true
+      allowAuthenticated: false
+    EditNodeAccess:
+      roles:
+        - ic-sti-superuser
+      clients: [ ]
+      allowAnonymous: false
+      allowAuthenticated: false
+    DeleteNodeAccess:
+      roles:
+        - ic-sti-superuser
+      claims: [ ]
+      clients: [ ]
+      allowAnonymous: false
+      allowAuthenticated: false
+    
+    # EdgeAccesss
+    BrowseEdgeAccess:
+      roles:
+        - ic-sti-superuser
+      clients: [ ]
+      allowAnonymous: true
+      allowAuthenticated: false
+    EditEdgeAccess:
+      roles:
+        - ic-sti-superuser
+      clients: [ ]
+      allowAnonymous: false
+      allowAuthenticated: false
+    DeleteEdgeAccess:
+      roles:
+        - ic-sti-superuser
+      claims: [ ]
+      clients: [ ]
+      allowAnonymous: false
+      allowAuthenticated: false
+
+    # GraphAccesss
+    BrowseGraphAccess:
+      roles:
+        - ic-sti-superuser
+      clients: [ ]
+      allowAnonymous: true
+      allowAuthenticated: false
+    EditGraphAccess:
+      roles:
+        - ic-sti-superuser
+      clients: [ ]
+      allowAnonymous: false
+      allowAuthenticated: false
+    DeleteGraphAccess:
+      roles:
+        - ic-sti-superuser
+      claims: [ ]
+      clients: [ ]
+      allowAnonymous: false
+      allowAuthenticated: false
+
+    # GraphNode
+    BrowseGraphNode:
+      roles:
+        - ic-sti-superuser
+      clients: [ ]
+      allowAnonymous: true
+      allowAuthenticated: false
+    EditGraphNode:
+      roles:
+        - ic-sti-superuser
+      clients: [ ]
+      allowAnonymous: false
+      allowAuthenticated: false
+    DeleteGraphNode:
+      roles:
+        - ic-sti-superuser
+      claims: [ ]
+      clients: [ ]
+      allowAnonymous: false
+      allowAuthenticated: false
+
+    # GraphEdge
+    BrowseGraphEdge:
+      roles:
+        - ic-sti-superuser
+      clients: [ ]
+      allowAnonymous: true
+      allowAuthenticated: false
+    EditGraphEdge:
+      roles:
+        - ic-sti-superuser
+      clients: [ ]
+      allowAnonymous: false
+      allowAuthenticated: false
+    DeleteGraphEdge:
+      roles:
+        - ic-sti-superuser
+      claims: [ ]
+      clients: [ ]
+      allowAnonymous: false
+      allowAuthenticated: false
+
+    # ViewPage Permissions
+    ViewUsersPage:
+      roles:
+        - ic-sti-superuser
+      clients: [ ]
+      allowAnonymous: false
+      allowAuthenticated: false
+    DownloadReport:
+      roles:
+        - ic-sti-superuser
+      clients: [ ]
+      allowAnonymous: false
+      allowAuthenticated: false

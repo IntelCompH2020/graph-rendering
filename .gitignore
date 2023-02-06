@@ -1,0 +1,9 @@
+playground/.mvn/
+target
+.idea
+*.iml
+logs/
+.vs
+GraphImport/bin/
+GraphImport/obj/
+GraphImport/GraphImport.csproj.user

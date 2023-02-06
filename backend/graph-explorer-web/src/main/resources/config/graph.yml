@@ -1,0 +1,6 @@
+graph:
+  nodeImportBatchSize: 500
+  edgeImportBatchSize: 500
+  edgeScrollSize: 1000
+  maxEdgeResultSize: 10000
+  

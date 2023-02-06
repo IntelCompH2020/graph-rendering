@@ -1,0 +1,22 @@
+#Source of properties for Spring boot autoconfigure
+# https://github.com/spring-projects/spring-boot/blob/main/spring-boot-project/spring-boot-autoconfigure/src/main/java/org/springframework/boot/autoconfigure/elasticsearch/ElasticsearchProperties.java
+elastic:
+  enabled: ${ES_ENABLED}
+  hosts:
+    - ${ES_HOST}
+  scheme: ${ES_SCHEME}
+  username: ${ES_USERNAME}
+  password: ${ES_PASSWORD}
+  useSSL: ${ES_USE_SSL}
+  socketTimeoutMillis: 30000
+  connectTimeoutMillis: 30000
+  defaultResultSize: 100
+  defaultCollectAllResultSize: 1000
+  defaultScrollSize: 100
+  defaultScrollSeconds: 120
+  defaultCompositeAggregationResultSize: 1000
+
+app-elastic:
+  nodeCodeKey: "{{code}}"
+  edgeCodeKey: "{{code}}"
+  enableIcuAnalysisPlugin: true

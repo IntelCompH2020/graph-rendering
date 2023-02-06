@@ -1,0 +1,12 @@
+event-scheduler:
+  task:
+    name: CheckRunningTasks
+    processor:
+      enable: true
+      interval-seconds: 30
+      options:
+        retry-threshold: 300
+        max-retry-delay-seconds: 10800
+        too-old-to-handle-seconds: 36000
+        parallel-tasks-threshold: 2
+      overrides: [ ]

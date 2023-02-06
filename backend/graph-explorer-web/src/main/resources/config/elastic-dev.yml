@@ -1,0 +1,9 @@
+#Source of properties for Spring boot autoconfigure
+# https://github.com/spring-projects/spring-boot/blob/main/spring-boot-project/spring-boot-autoconfigure/src/main/java/org/springframework/boot/autoconfigure/elasticsearch/ElasticsearchProperties.java
+elastic:
+  disableHostnameVerifier: true
+  serverCertificatePaths:
+    - classpath:certificates/elasticsearch_dev04.crt
+app-elastic:
+  nodeDataIndexNamePattern: ic-graph-{{code}}-node-data-dev
+  edgeDataIndexNamePattern: ic-graph-{{code}}-edge-data-dev

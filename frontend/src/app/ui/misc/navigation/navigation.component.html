@@ -1,0 +1,82 @@
+<mat-toolbar class="navigation-bar row m-0">
+	<div class="col-auto">
+        <img src="../../../../assets/images/intelcomp-app-logo_2.png" class="img img-fluid" alt="Intelcomp Logo">
+    </div>
+
+	<div class="col-auto p-0" style="z-index: 2;">
+		<nav class="navigation h-100">
+			<ul class="navigation-groups h-100">
+				<li class="navigation-group-item cursor-pointer" routerLink="/home" routerLinkActive="background-gray">
+					{{'APP.NAVIGATION.HOME' | translate}}
+				</li>
+				<li class="navigation-group-item cursor-pointer" routerLink="/graphs" routerLinkActive="background-gray">
+					{{'APP.NAVIGATION.GRAPHS' | translate}}
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<div class="col"></div>
+	<!-- <div *ngIf="isAuthenticated() && areConsentsNeedAttention()" class="col-auto">
+		<button mat-icon-button matTooltip="{{'APP.NAVIGATION.CONSENT-ATTENTION' | translate}}"
+			(click)="consentsNeedAttentionClicked()">
+			<mat-icon class="consent-icon">warning</mat-icon>
+		</button>
+	</div>
+	<div *ngIf="isAuthenticated() && isTransientUser()" class="col-auto">
+		<a routerLink="/user-profile" routerLinkActive="active" mat-icon-button
+			matTooltip="{{'APP.NAVIGATION.TRANSIENT-PROMPT' | translate}}">
+			<mat-icon>group_add</mat-icon>
+		</a>
+	</div>
+	 -->
+	<!-- * LANGUAGE -->
+	<div class="col-auto">
+		<button mat-button [matMenuTriggerFor]="languageMenu" class="background-gray">
+			<span [class]="languageFlag$ | async"></span>
+			{{languageSelected$ | async | translate}}
+			<mat-icon>
+				arrow_drop_down
+			</mat-icon>
+		</button>
+		<mat-menu #languageMenu="matMenu">
+			<button mat-menu-item (click)="onLanguageSelected(languageTypes.English)">
+				<span class="fi fi-gb mr-2"></span>
+					{{'APP.NAVIGATION.ENGLISH-LANGUAGE' | translate}}
+				</button>
+				<button mat-menu-item (click)="onLanguageSelected(languageTypes.Greek)">
+					<span class="fi fi-gr mr-2"></span>
+					{{'APP.NAVIGATION.GREEK-LANGUAGE' | translate}}
+				</button>
+		</mat-menu>
+	</div>
+
+
+	<!-- * USER INFO -->
+	<div *ngIf="isAuthenticated()" class="col-auto">
+
+		<button mat-button [matMenuTriggerFor]="menu" class="rounded-button background-gray">
+			<img *ngIf="authService.getUserProfilePictureRef() else namePlaceholder" class="profile-picture"
+						[src]="getProfilePicture() | secureImage | async">
+			<ng-template #namePlaceholder>
+				<div class="profile-picture d-flex background-blue justify-content-center align-items-center">
+					<small class="d-inline-block">
+						{{getPrincipalName()?.[0]}}
+					</small>
+				</div>
+			</ng-template>
+			<span class="d-inline-block pl-3">
+				{{this.getPrincipalName()}}
+			</span>
+		</button>
+		<mat-menu #menu="matMenu">
+			<!-- <button mat-menu-item *ngIf="authService.hasPermission(authService.permissionEnum.ViewUserProfilePage)"
+			routerLink="/user-profile" [queryParams]="getUserProfileQueryParams()"><mat-icon>person</mat-icon>{{'APP.NAVIGATION.VIEW-PROFILE' | translate}}</button> -->
+			<button mat-menu-item><mat-icon>settings</mat-icon>{{'APP.NAVIGATION.SETTINGS' | translate}}</button>
+			<button mat-menu-item><mat-icon>message</mat-icon>{{'APP.NAVIGATION.NOTIFICATIONS' | translate}}</button>
+			<button mat-menu-item (click)="logout()"><mat-icon>exit_to_app</mat-icon>{{'APP.NAVIGATION.LOGOUT' | translate}}</button>
+		</mat-menu>
+	</div>
+	<div *ngIf="progressIndication" class="progress-bar" style="z-index: -1;">
+		<mat-progress-bar color="accent" mode="indeterminate"></mat-progress-bar>
+	</div>
+</mat-toolbar>

@@ -1,0 +1,10 @@
+gremlin:
+  enabled: ${GREMLIN_ENABLED}
+  endpoint: ${GREMLIN_ENDPOINT}
+  port: ${GREMLIN_PORT}
+  username: ${GREMLIN_USERNAME}
+  password: ${GREMLIN_PASSWORD}
+  sslEnabled: ${GREMLIN_SSL}
+  evaluationTimeout: ${GREMLIN_EVALUATION_TIMEOUT}
+  maxContentLength: 655360 # gremlin-server.yaml   maxContentLength also should be changed
+  

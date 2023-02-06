@@ -1,0 +1,27 @@
+<div class="editor-graphs">
+	<div class="w-100 h-100 position-absolute" id='sigma-container'></div>
+    <mat-spinner id="spinner" *ngIf="initialLoading" color="accent"></mat-spinner>
+    <div id="controls">
+      <mat-form-field class="mr-2 bg-white" *ngIf="isDevelopment">
+        <mat-label>Page size</mat-label>
+        <input type="number" matInput [(ngModel)]="pageSize">
+      </mat-form-field>
+
+      <div class="input">
+        <label for="zoom-in">Zoom in</label>
+        <button id="zoom-in" (click)="zoomIn()">+</button>
+      </div>
+      <div class="input">
+        <label for="zoom-out">Zoom out</label>
+        <button id="zoom-out" (click)="zoomOut()">-</button>
+      </div>
+      <div class="input">
+        <label for="zoom-reset">Reset zoom</label>
+        <button id="zoom-reset" (click)="resetZoom()">⊙</button>
+      </div>
+      <div class="input">
+        <label for="labels-threshold">Labels threshold</label>
+        <input id="labels-threshold" #thresholdInput type="range" (change)="onThresholdRangeChange(thresholdInput.value)" min="0" max="15" step="0.5" />
+      </div>
+    </div>
+</div>
